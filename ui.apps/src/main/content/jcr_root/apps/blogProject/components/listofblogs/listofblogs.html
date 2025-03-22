@@ -1,0 +1,20 @@
+<template data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+          data-sly-call="${clientlib.css @ categories='clientlib.listofblogs'}">
+</template>
+
+<div class="blog-container" data-sly-use.body="com.ttn.blog.core.models.ListOfBlogs">
+    <div class="blog-column" data-sly-repeat="${body.blogs}">
+        <div class="card">
+            <img class="card-img-top" src="${item.Img}" alt="Blog image">
+            <div class="card-body">
+                <strong class="d-inline-block mb-2 text-success">Blog</strong>
+                <h3 class="mb-0">
+                    <a class="text-dark" href="${item.Link @context = 'uri'}">${item.Title}</a>
+                </h3>
+                <div class="mb-1 text-muted">${item.Date}</div>
+                <p class="card-text">${item.SubHeading}</p>
+                <a href="${item.Link @context = 'uri'}">Continue reading</a>
+            </div>
+        </div>
+    </div>
+</div>

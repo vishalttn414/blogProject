@@ -1,0 +1,13 @@
+<template data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='clientlib.heading'}">
+</template>
+
+<div data-sly-use.model="com.ttn.blog.core.models.HeadingModel">
+<div class="blog-heading">
+    <h1>${model.title}</h1>
+    <p>
+        <span class="blog-date">${model.createdDate}</span> by
+        <span class="blog-author">${model.authorName}</span>
+    </p>
+</div>
+</div>

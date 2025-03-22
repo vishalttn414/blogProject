@@ -1,0 +1,39 @@
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom:2px solid black;
+}
+
+.logo img{
+    width: 70px;
+}
+
+.logo a{
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+.menu{
+    display:none;
+}
+.menu span{
+    font-size:50px;
+}
+
+.navbar{
+    display: flex;
+    gap:20px;
+    margin: 10px;
+}
+ul{
+    list-style: none;
+}
+.navbar li{
+    color: rgb(29, 142, 187);
+    cursor: pointer;
+}
+.navbar li a {
+text-decoration: none;
+color: inherit;
+}

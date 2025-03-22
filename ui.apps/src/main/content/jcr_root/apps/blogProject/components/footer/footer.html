@@ -1,0 +1,18 @@
+<div data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='blogproject.footer'}"/>
+
+<div data-sly-use.footerModel="com.ttn.blog.core.models.FooterModel" class="footer-container">
+    <div class="footer-top">
+        <a href="#" class="back-to-top-link">Back to top</a>
+    </div>
+
+    <div class="wrapper">
+        <div class="footer-middle">
+            <a href="${footerModel.homePageLink}" class="homepage-link">HomePage</a>
+            <a href="${footerModel.blogsLink}" class="blogs-link">Blogs</a>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright-text">© 2025 - 2026 TTN Bootcamp. All rights reserved.</p>
+        </div>
+    </div>
+</div>
