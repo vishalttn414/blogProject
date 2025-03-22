@@ -1,6 +1,5 @@
-<template data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
-          data-sly-call="${clientlib.css @ categories='clientlib.listofblogs'}">
-</template>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+          data-sly-call="${clientlib.css @ categories='clientlib.listofblogs'}"/>
 
 <div class="blog-container" data-sly-use.body="com.ttn.blog.core.models.ListOfBlogs">
     <div class="blog-column" data-sly-repeat="${body.blogs}">

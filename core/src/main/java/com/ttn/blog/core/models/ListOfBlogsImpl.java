@@ -14,8 +14,6 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
-
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Model(
@@ -40,6 +38,5 @@ public class ListOfBlogsImpl implements ListOfBlogs {
         Page currPage=r.adaptTo(Page.class);
 
         return publishedBlogsService.getPublishedBlogs(currPage,null,3);
-
     }
 }

@@ -1,6 +1,5 @@
-<template data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
-     data-sly-call="${clientlib.css @ categories='blogproject.about'}">
-</template>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='blogproject.about'}"/>
 
 <div class="about-container" data-sly-use.aboutModel="com.ttn.blog.core.models.About">
     <h2 class="about-heading">${aboutModel.heading}</h2>

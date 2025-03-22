@@ -66,8 +66,10 @@
     object-fit: cover;
     display: none;
 }
+
 @media (min-width: 992px) {
     .blog-image {
         display: block;
     }
 }
+
