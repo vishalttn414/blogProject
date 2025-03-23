@@ -27,8 +27,8 @@ public class ArchiveImpl implements Archive {
     public List<String> getArchiveDates(){
 
         Set<String> archive = new HashSet<>();
-        Resource r=resolver.resolve(blogpath);
-        Iterator<Resource> it=r.listChildren();
+        Resource resource=resolver.resolve(blogpath);
+        Iterator<Resource> it=resource.listChildren();
         SimpleDateFormat sdf = new SimpleDateFormat("MMMMM yyyy");
         while(it.hasNext()){
             archive.add(sdf.format(it.next().getValueMap().get("jcr:created",Date.class)));

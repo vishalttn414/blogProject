@@ -36,7 +36,6 @@ public class HeadingModelImpl implements HeadingModel {
         return currentPage.getTitle();
     }
 
-
     @Override
     public String getAuthorName() {
         String createdBy=getLoggedInUserName();
@@ -62,7 +61,6 @@ public class HeadingModelImpl implements HeadingModel {
                     return (fullName != null && !fullName.isEmpty()) ? fullName : userId;
                 }
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }

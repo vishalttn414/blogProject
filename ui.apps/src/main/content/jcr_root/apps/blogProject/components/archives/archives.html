@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <div class="p-3">
     <h4 class="font-italic">Archives</h4>
     <div data-sly-use.body="com.ttn.blog.core.models.Archive">
-        <ol class="list-unstyled mb-0" data-sly-list="${body.archiveDates}">
+        <ol class="list-unstyled mb-0" data-sly-list.item="${body.archiveDates}">
             <li><a href="${body.blogpath @ context='uri'}.html?month=${item @ context='uri'}">${item}</a>
             </li>
         </ol>
