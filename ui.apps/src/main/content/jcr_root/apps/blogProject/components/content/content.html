@@ -2,7 +2,7 @@
      data-sly-call="${clientlib.css @ categories='blogproject.content'}"/>
 
 <div class="blog-container" data-sly-use.content="com.ttn.blog.core.models.PublishedListofBlogs">
-    <div class="blog-list" data-sly-list="${content.blogs}">
+    <div class="blog-list" data-sly-list.item="${content.blogs}">
         <div class="blog-card">
             <div class="blog-content">
                 <h3 class="blog-title">

@@ -4,6 +4,9 @@ import org.osgi.service.component.annotations.Component;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+// This is a generic service which is used whenever we want to fetch data of child pages based on month
+//  and limit.
+
 @Component(service = PublishedBlogsService.class,immediate = true)
 public class PublishedBlogsServiceImpl implements PublishedBlogsService {
 
@@ -19,14 +22,9 @@ public class PublishedBlogsServiceImpl implements PublishedBlogsService {
             Date createdDate = childPage.getProperties().get("jcr:created", Date.class);
             String formattedDate = sdf.format(createdDate);
 
-            if (monthFilter != null) {
-                String[] splitParam = monthFilter.split(" ");
-                if (splitParam.length == 2) {
-                    String month = splitParam[0];
-                    String year = splitParam[1];
-                    if (!formattedDate.contains(month) || !formattedDate.contains(year)) {
-                        continue;
-                    }
+            if (monthFilter!=null){
+                if(!formattedDate.equals(monthFilter)){
+                    continue;
                 }
             }
 

@@ -2,7 +2,7 @@
           data-sly-call="${clientlib.css @ categories='clientlib.listofblogs'}"/>
 
 <div class="blog-container" data-sly-use.body="com.ttn.blog.core.models.ListOfBlogs">
-    <div class="blog-column" data-sly-repeat="${body.blogs}">
+    <div class="blog-column" data-sly-repeat.item="${body.blogs}">
         <div class="card">
             <img class="card-img-top" src="${item.Img}" alt="Blog image">
             <div class="card-body">

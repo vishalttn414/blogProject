@@ -7,7 +7,7 @@ import com.day.cq.wcm.api.PageManager;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.HttpConstants;
-import org.apache.sling.api.servlets.SlingAllMethodsServlet;
+import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.osgi.service.component.annotations.Component;
 
 import javax.servlet.Servlet;
@@ -25,7 +25,7 @@ import org.osgi.service.component.annotations.Reference;
         "sling.servlet.extensions=" + "json"
 
 })
-public class PublishedBlogsServlet extends SlingAllMethodsServlet {
+public class PublishedBlogsServlet extends SlingSafeMethodsServlet {
 
     @Reference
     private PublishedBlogsService publishedBlogsService;

@@ -1,5 +1,4 @@
 package com.ttn.blog.core.models;
-
 import java.util.List;
 import java.util.Map;
 

@@ -10,7 +10,7 @@ import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import java.util.*;
 
 @Model(
-        adaptables = {SlingHttpServletRequest.class},
+        adaptables = SlingHttpServletRequest.class,
         adapters = PublishedListofBlogs.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
@@ -22,15 +22,20 @@ public class PublishedListofBlogsImpl implements PublishedListofBlogs {
     @ScriptVariable
     private SlingHttpServletRequest request;
 
+//  We are using this service to get data of Child Pages based on the limit parameter,that we are getting
+//  from configuration
     @OSGiService
     private PublishedBlogsService publishedBlogsService;
 
+
+//  In this service we have used PublishedBlogsConfiguration so we are using this service to get the
+//  no of blogs that we have set in configuartion through system/console/configMgr.
     @OSGiService
     private PublishedBlogs publishedBlogs;
 
     @Override
     public List<Map<String, String>> getBlogs() {
-        String monthParam = request.getParameter("month");
+      String monthParam = request.getParameter("month");
         int limit = publishedBlogs.noOfBlogs();
         return publishedBlogsService.getPublishedBlogs(currentPage, monthParam, limit);
     }
