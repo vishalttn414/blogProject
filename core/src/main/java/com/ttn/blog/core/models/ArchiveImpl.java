@@ -5,6 +5,7 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
+import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import java.text.SimpleDateFormat;
@@ -20,7 +21,7 @@ public class ArchiveImpl implements Archive {
     @ValueMapValue
     private String blogpath;
 
-    @ScriptVariable
+    @SlingObject
     private ResourceResolver resolver;
 
     @Override

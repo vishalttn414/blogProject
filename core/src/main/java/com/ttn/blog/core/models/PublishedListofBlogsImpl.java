@@ -27,7 +27,6 @@ public class PublishedListofBlogsImpl implements PublishedListofBlogs {
     @OSGiService
     private PublishedBlogsService publishedBlogsService;
 
-
 //  In this service we have used PublishedBlogsConfiguration so we are using this service to get the
 //  no of blogs that we have set in configuartion through system/console/configMgr.
     @OSGiService
